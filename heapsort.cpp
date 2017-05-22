@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
 {
     int ret = 0;
 	int lenth = 0;
-    int arr[] = {6, 9, 0, 2, 7, 3, 8, 5, 4, 1};
+    int arr[] = {6, 9, 0, 2, 7, 3, 8, 5, 1, 4};
 
 	do_return_val(NULL == argv, ERR_CODE);
 
@@ -55,7 +55,7 @@ int heapsort(int* arr, int lenth)
     ret = swap(&arr[0], &arr[lenth]);
 	do_return_val(ERR_CODE == ret, ret);
 
-	for(i = lenth - 1; i >= 0; i--)
+	for(i = lenth - 1; i > 0; i--)
 	{
 		ret = heap(arr, 0, i);
 		do_return_val(ERR_CODE == ret, ret);
